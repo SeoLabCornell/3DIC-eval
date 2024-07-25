@@ -91,12 +91,7 @@ xlist = [i+1 for i in range(num_workload)]
 bl_cycle = cycle_list[:, 0, 0] 
 divM_cycle = cycle_list[:, 1, 0] 
 divC_cycle = cycle_list[:, 2, 0] 
-_3d_2_cycle = cycle_list[:, 3, 0] 
-if wk_list[wk].strip('.csv') == 'ResNet18' :
-    print('{:.2f}'.format(np.mean(bl_cycle / bl_cycle) * 100))
-    print('{:.2f}'.format(np.mean(divM_cycle / bl_cycle) * 100))
-    print('{:.2f}'.format(np.mean(divC_cycle / bl_cycle) * 100))
-    print('{:.2f}'.format(np.mean(_3d_2_cycle / bl_cycle) * 100))
+_3d_2_cycle = cycle_list[:, 3, 0]
 plt.xticks(np.arange(1, num_workload+1, step=2), size=17, weight='bold')
 if num_workload <= 10:
     plt.xticks(np.arange(1, num_workload+1, step=1), size=17, weight='bold')
@@ -118,13 +113,6 @@ bl_util = cycle_list[:, 0, 1]
 divM_util = cycle_list[:, 1, 1]
 divC_util = cycle_list[:, 2, 1]
 _3d_2_util = cycle_list[:, 3, 1]
-
-# print(bl_util)
-if wk_list[wk].strip('.csv') == 'Transformer' :
-    print('2D:         {:.2f} %'.format(np.mean(bl_util) * 100))
-    print('3D_divCout: {:.2f} %'.format(np.mean(divM_util) * 100))
-    print('3D_divCin:  {:.2f} %'.format(np.mean(divC_util) * 100))
-    print('3D_2:       {:.2f} %'.format(np.mean(_3d_2_util) * 100))
 
 
 plt.plot(xlist, bl_util * 100, label='2D_BL')

@@ -10,7 +10,7 @@ def get_sram_area(buf_size):
 
 def get_mac_energy():
     # energy = 0.435  # 0.435 pJ/MAC Google TPU (ISCA 2017) Jouppi et al.
-    energy = 0.2296 # 0.2224 pJ/MAC TSMC 28nm synthesis estimation * 2
+    energy = 0.2296 # 0.2296 pJ/MAC TSMC 28nm synthesis estimation
     return energy
 
 

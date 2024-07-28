@@ -11,11 +11,11 @@ class hw_config_2d:
         self.ofbuf_size = cur_hw[4]  # KB
         self.wbuf_size = cur_hw[5]   # KB     
         
-        self.pe_unit_area = 0.00121  # 0.00121mm2 Google TPU (ISCA 2017) Jouppi et al.
+        self.pe_unit_area = 0.00121  # mm^2, 28nm Synthesis Result
         self.pe_sram_area = get_sram_area(self.ifbuf_size) + get_sram_area(self.ofbuf_size) + get_sram_area(self.wbuf_size)
         self.pe_total_area = self.pe_unit_area * self.xdim * self.ydim + self.pe_sram_area
         
-        self.mac_energy = get_mac_energy()  # 0.435 pJ/MAC Google TPU (ISCA 2017) Jouppi et al.
+        self.mac_energy = get_mac_energy()  # pJ, 28nm Synthesis Result
         self.dram_access_energy = 4.48 * self.bit  # 4.48pJ/bit Samsung LPDDR5 (JSSC 2020) Ha et al.
         self.ifbuf_energy = get_sram_energy(self.ifbuf_size)  # pJ/access
         self.ofbuf_energy = get_sram_energy(self.ofbuf_size)  # pJ/access
@@ -42,7 +42,7 @@ class hw_config_2d:
         self.num_dcim_macro = self.get_num_mac() / 32  # DCIM Max. Thruput 256/Cycle (ESSCIRC 2023) Oh et al.
         self.xdim_dcim = np.round(np.sqrt(self.num_dcim_macro))
         self.ydim_dcim = np.round(np.sqrt(self.num_dcim_macro))
-        self.dcim_mac_energy = 0.08  # 0.0893pJ/MAC (ESSCIRC 2023) Oh et al.
+        self.dcim_mac_energy = 0.08  # 0.08pJ/MAC (ESSCIRC 2023) Oh et al.
         
         self.dcim_unit_area = 0.0159 * 1  # 0.0159mm2 (ESSCIRC 2023) Oh et al.
         self.dcim_sram_area = get_sram_area(self.ifbuf_size) + get_sram_area(self.ofbuf_size)
@@ -147,7 +147,7 @@ class hw_config_3d_combi:
         self.ofbuf_size_bot = cur_hw[4] / 2  # KB
         self.wbuf_size_bot = cur_hw[5] / 2   # KB        
         
-        self.pe_unit_area = 0.00121  # 0.00121mm2 Google TPU (ISCA 2017) Jouppi et al.
+        self.pe_unit_area = 0.00121  # mm^2, 28nm Synthesis Result
         self.pe_sram_area = get_sram_area(self.ifbuf_size_bot) + get_sram_area(self.ofbuf_size_bot) + get_sram_area(self.wbuf_size_bot)
         self.pe_total_area = self.pe_unit_area * self.xdim_bot * self.ydim_bot + self.pe_sram_area
         
@@ -428,7 +428,7 @@ class hw_config_3d_mem_on_logic:
 
         self.pe_ofbuf_bot = False
         
-        self.pe_unit_area = 0.00121  # 0.00121mm2 Google TPU (ISCA 2017) Jouppi et al.
+        self.pe_unit_area = 0.00121  # mm^2, 28nm Synthesis Result
         self.pe_sram_area = get_sram_area(self.ifbuf_size) + get_sram_area(self.ofbuf_size)
         self.pe_total_area = self.pe_unit_area * self.xdim * self.ydim
         if self.pe_total_area < self.pe_sram_area:

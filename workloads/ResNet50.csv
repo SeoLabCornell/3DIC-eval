@@ -1,5 +1,5 @@
-Layer name, IFMAP Height, IFMAP Width, Filter Height, Filter Width, Channels, Num Filter, Strides,,,Eh,Ew,e2
-Conv1,224,224,7,7,3,64,2,,,110,110,12100
+Layer name, IFMAP Height, IFMAP Width, Filter Height, Filter Width, Channels, Num Filter, Strides,,,
+Conv1,224,224,7,7,3,64,2,,,
 CB2a_1,56,56,1,1,64,64,1,,,,,
 CB2a_2,56,56,3,3,64,64,1,,,,,
 CB2a_3,56,56,1,1,64,256,1,,,,,

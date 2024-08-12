@@ -4,7 +4,7 @@ This is the artifact of the paper '**3D IC Architecture Evaluation and Optimizat
 
 ## Updates
 
-- **[Aug. 02, 2024]:** Initial version of the artifact is published together with the camera-ready version of our **ISLPED paper**.
+- **[Aug. 06, 2024]:** Initial version of the artifact is published together with the camera-ready version of our **ISLPED paper**.
 
 ## How to use?
 ### e_breakdown.py

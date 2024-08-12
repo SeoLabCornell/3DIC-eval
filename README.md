@@ -9,15 +9,15 @@ This is the artifact of the paper '**3D IC Architecture Evaluation and Optimizat
 ## How to use?
 ### e_breakdown.py
 Generates energy breakdown of hardware given PE array size, buffer size and workload.
-- Usage: <span style="font-family: Consolas"> python e_breakdown.py -x xdim -y ydim --buf bufsize --wk workload
+- Usage: <code> python e_breakdown.py -x xdim -y ydim --buf bufsize --wk workload </code>
 
 ### cycle_util.py
 Generates cycles and utilization of hardware given PE array size, buffer size and workload.
-- Usage: <span style="font-family: Consolas"> python cycle_util.py -x xdim -y ydim --buf bufsize --wk workload
+- Usage: <code> python cycle_util.py -x xdim -y ydim --buf bufsize --wk workload </code>
 
 ### energy_sweep.py
 Generates energy breakdown across 8 different AI models and different sizes of PE array and buffer.
-- Usage: <span style="font-family: Consolas"> python energy_sweep.py
+- Usage: <code> python energy_sweep.py </code>
 
 
 ## Authors

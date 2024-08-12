@@ -8,7 +8,8 @@ This is the artifact of the paper '**3D IC Architecture Evaluation and Optimizat
 
 ## How to use?
 - To get the argument information, type <code>python FILENAME.py -h</code> for the following python scripts.
-- In the <code>workload</code> folder, 8 different AI workloads are loaded as csv files. You can add your own model dimensions following the other file formats. Refer to <code>workload.py</code> which reads and makes class from the csv file. 
+- In the <code>workload</code> folder, 8 different AI workloads are loaded as csv files. You can add your own model dimensions following the other file formats. Refer to <code>workload.py</code> which reads and makes class from the csv file.
+- Following scripts are the examples to represent the simulation results. You can also get more detailed data from the simulator in terms of energy, area, cycles and utilizations.
 ### e_breakdown.py
 Generates energy breakdown of hardware given PE array size, buffer size and workload.
 - Usage: <code>python e_breakdown.py -x xdim -y ydim --buf bufsize --wk workload</code>

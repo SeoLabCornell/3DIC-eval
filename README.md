@@ -29,7 +29,7 @@ Generates energy breakdown across 8 different AI models and different sizes of P
 
 ### c_breakdown.py
 Generates carbon breakdown across 6 different systolic array/DCIM based 2D/3D architectures.
-- Usage: <code>python energy_sweep.py -x xdim -y ydim --buf bufsize</code>
+- Usage: <code>python c_breakdown.py -x xdim -y ydim --buf bufsize</code>
 
 
 ## Authors
